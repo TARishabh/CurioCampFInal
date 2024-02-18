@@ -7,7 +7,7 @@ import * as Yup from "yup";
 
 
 const UpdateDetails = () => {
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   const user_id = localStorage.getItem("user_id")

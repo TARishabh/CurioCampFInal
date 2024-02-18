@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function MCQ() {
-    const url = import.meta.env.VITE_BASE_URL
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"_URL
     const token = import.meta.env.VITE_TOKEN
     const handleonclick = () =>{
         const fetchContentData = async () => {

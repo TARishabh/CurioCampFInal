@@ -10,7 +10,7 @@ const Courses = () => {
   const [filterRating, setFilterRating] = useState(null);
 
   const fetchCourses = () => {
-    const url = import.meta.env.VITE_BASE_URL;
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/";
     fetch(`${url}api/courses/`)
       .then((response) => {
         if (!response.ok) {
@@ -31,7 +31,7 @@ const Courses = () => {
   }, []);
 
   const handleSearchOnclick = () => {
-    const url = import.meta.env.VITE_BASE_URL;
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
     console.log(searchQuery);
 
     fetch(`${url}api/courses/?course=${searchQuery}`)
@@ -50,7 +50,7 @@ const Courses = () => {
   };
 
   const handleRatingOnclick = (newvalue) => {
-    const url = import.meta.env.VITE_BASE_URL;
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
     console.log(searchQuery);
 
     fetch(`${url}api/courses/?rating=${newvalue}`)

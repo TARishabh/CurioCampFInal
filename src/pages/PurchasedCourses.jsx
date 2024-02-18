@@ -4,7 +4,7 @@ import CourseCard from '../component/CourseCard';
 
 const PurchasedCourses = () => {
   const [courses, setCourses] = useState([]);
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
 //   console.log(url)
   useEffect(() => {
     const fetchPurchasedCourses = async () => {

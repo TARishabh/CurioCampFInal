@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 
 const PurchasedCourses = () => {
   const [courses, setCourses] = useState([]);
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   // const { id } = useParams();
   const user_id = localStorage.getItem("user_id");
   const authToken = localStorage.getItem("token");

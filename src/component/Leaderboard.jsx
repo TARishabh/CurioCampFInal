@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Import axios for making HTTP requests
 function Leaderboard() {
     const [leaderboardData, setLeaderboardData] = useState([]); // State to hold leaderboard data
-    const url = import.meta.env.VITE_BASE_URL
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
     useEffect(() => {
         const fetchLeaderboardData = async () => {
             try {

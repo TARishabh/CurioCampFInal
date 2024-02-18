@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/";
   const navigate = useNavigate();
   // const [isOtp, setIsOtp] = useState(false);
 

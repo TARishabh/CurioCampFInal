@@ -19,7 +19,7 @@ const CourseContent = () => {
   // const handleCompleted
   useEffect(() => {
     // localStorage.setItem("token", import.meta.env.VITE_USER_TOKEN);
-    const url = import.meta.env.VITE_BASE_URL;
+    const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
     // const token = localStorage.getItem('token');
     const token = import.meta.env.VITE_TOKEN;
     fetch(`${url}api/modules/?course_id=${id}`, {

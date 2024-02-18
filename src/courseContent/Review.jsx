@@ -8,7 +8,7 @@ const Review = () => {
   const [showReviewFields, setShowReviewFields] = useState(false);
   const [review, setReview] = useState('');
   const [rating, setRating] = useState(0);
-  const url = import.meta.env.VITE_BASE_URL
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   const { id } = useParams(); 
   const userId = localStorage.getItem("user_id")
 

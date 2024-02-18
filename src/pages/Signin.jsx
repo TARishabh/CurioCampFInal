@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signin = () => {
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   const [loading, setLoading] = useState(false); // Add loading state
   const navigate = useNavigate();
   const validate = Yup.object({

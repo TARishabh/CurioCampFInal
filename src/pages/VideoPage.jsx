@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 const VideoPage = () => {
   const [videolink, setVideolink] = useState("");
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/";
   const { id } = useParams();
   useEffect(() => {
     const token = import.meta.env.VITE_TOKEN;

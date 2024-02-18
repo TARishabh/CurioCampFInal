@@ -16,7 +16,7 @@ const CoursePage = () => {
   const { id } = useParams();
   const [course, setCourse] = useState([]);
   const [canPostReview, setCanPostReview] = useState(false); // State variable to track if user can post review
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
 
   useEffect(() => {
     // Fetch course details

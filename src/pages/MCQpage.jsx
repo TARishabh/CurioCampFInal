@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 const MCQpage = () => {
   const { id } = useParams();
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   const module_id = localStorage.getItem("module_id");
   const content_id = localStorage.getItem("content_id");
   const [selectedAnswers, setSelectedAnswers] = useState(

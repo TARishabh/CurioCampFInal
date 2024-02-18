@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const Learningpath = () => {
   const { id } = useParams();
-  const url = import.meta.env.VITE_BASE_URL;
+  const url = import.meta.env.VITE_BASE_URL || "http://127.0.0.1:8000/"
   const user_id = localStorage.getItem("user_id")
   const [selectedAnswers, setSelectedAnswers] = useState(
     questions.results.map(() => "")
