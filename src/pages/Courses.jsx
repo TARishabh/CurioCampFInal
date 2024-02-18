@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../component/Navbar";
 import CourseCard from "../component/CourseCard";
-import results from "./data";
 import Footer from "../component/footer";
 import RatingSearch from "../component/RatingSearch";
+
 const Courses = () => {
   const [courses, setCourses] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [filterRating, setFilterRating] = useState(null);
+
   const fetchCourses = () => {
     const url = import.meta.env.VITE_BASE_URL;
     fetch(`${url}api/courses/`)
@@ -23,8 +25,15 @@ const Courses = () => {
         console.error("Fetch error:", error);
       });
   }
+
+  useEffect(() => {
+    fetchCourses();
+  }, []);
+
   const handleSearchOnclick = () => {
     const url = import.meta.env.VITE_BASE_URL;
+    console.log(searchQuery);
+
     fetch(`${url}api/courses/?course=${searchQuery}`)
       .then((response) => {
         if (!response.ok) {
@@ -38,10 +47,36 @@ const Courses = () => {
       .catch((error) => {
         console.error("Fetch error:", error);
       });
-  }
-  useEffect(() => {
-    fetchCourses();
-  }, []);
+  };
+
+  const handleRatingOnclick = (newvalue) => {
+    const url = import.meta.env.VITE_BASE_URL;
+    console.log(searchQuery);
+
+    fetch(`${url}api/courses/?rating=${newvalue}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setCourses(data.results.results);
+      })
+      .catch((error) => {
+        console.error("Fetch error:", error);
+      });
+  };
+
+
+  // Function to handle rating change
+  const handleRatingChange = (newValue) => {
+    setFilterRating(newValue);
+    console.log(newValue);
+    // Call the function to fetch courses based on the new rating value
+    handleRatingOnclick(newValue);
+  };
+
   return (
     <div className="courses">
       <Navbar />
@@ -64,7 +99,7 @@ const Courses = () => {
             </button>
           </form>
           </div>
-          <RatingSearch/>
+          <RatingSearch onRatingChange={handleRatingChange} />
            </div>
         </div>
         
