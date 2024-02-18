@@ -1,0 +1,89 @@
+{
+    "statusCode": 200,
+    "results": [
+        {
+            "id": 9,
+            "content_type": "quiz",
+            "title": "What is your Tech Knowledge? ",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T14:47:41.379351Z",
+            "updated_at": "2024-02-13T14:47:41.379380Z",
+            "content_options": [
+                {
+                    "id": 1,
+                    "options_text": "Newbie"
+                },
+                {
+                    "id": 2,
+                    "options_text": "Basic"
+                },
+                {
+                    "id": 3,
+                    "options_text": "Intermediate"
+                },
+                {
+                    "id": 4,
+                    "options_text": "Advance"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "content_type": "quiz",
+            "title": "Which is best company?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 5,
+                    "options_text": "Frontend"
+                },
+                {
+                    "id": 6,
+                    "options_text": "Backend"
+                },
+                {
+                    "id": 7,
+                    "options_text": "Fullstack"
+                },
+                {
+                    "id": 8,
+                    "options_text": "Database & Analytics"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "content_type": "quiz",
+            "title": "Which is best company?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 5,
+                    "options_text": "Frontend"
+                },
+                {
+                    "id": 6,
+                    "options_text": "Backend"
+                },
+                {
+                    "id": 7,
+                    "options_text": "Fullstack"
+                },
+                {
+                    "id": 8,
+                    "options_text": "Database & Analytics"
+                }
+            ]
+        }
+    ]
+}

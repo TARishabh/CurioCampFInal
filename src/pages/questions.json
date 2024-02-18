@@ -1,0 +1,325 @@
+{
+    "statusCode": 200,
+    "results": [
+        {
+            "id": 1,
+            "content_type": "quiz",
+            "title": "What does JSX stand for in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T14:47:41.379351Z",
+            "updated_at": "2024-02-13T14:47:41.379380Z",
+            "content_options": [
+                {
+                    "id": 1,
+                    "options_text": "JavaScript XML",
+                    "is_correct": true
+                },
+                {
+                    "id": 2,
+                    "options_text": "Java XML",
+                    "is_correct": false
+                },
+                {
+                    "id": 3,
+                    "options_text": "JSON XML",
+                    "is_correct": false
+                },
+                {
+                    "id": 4,
+                    "options_text": "JavaScriptX",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "content_type": "quiz",
+            "title": "What is the virtual DOM in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 5,
+                    "options_text": "A lightweight version of the actual DOM",
+                    "is_correct": true
+                },
+                {
+                    "id": 6,
+                    "options_text": "A separate DOM for testing",
+                    "is_correct": false
+                },
+                {
+                    "id": 7,
+                    "options_text": "A backup DOM in case of errors",
+                    "is_correct": false
+                },
+                {
+                    "id": 8,
+                    "options_text": "A DOM for server-side rendering",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "content_type": "quiz",
+            "title": "What is the purpose of state in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 9,
+                    "options_text": "To store and manage component-specific data",
+                    "is_correct": true
+                },
+                {
+                    "id": 10,
+                    "options_text": "To define the structure of the component",
+                    "is_correct": false
+                },
+                {
+                    "id": 11,
+                    "options_text": "To handle API requests",
+                    "is_correct": false
+                },
+                {
+                    "id": 12,
+                    "options_text": "To style the component",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "content_type": "quiz",
+            "title": "What is a higher-order component in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 13,
+                    "options_text": "A function that takes a component and returns a new component",
+                    "is_correct": true
+                },
+                {
+                    "id": 14,
+                    "options_text": "A component with a higher rendering priority",
+                    "is_correct": false
+                },
+                {
+                    "id": 15,
+                    "options_text": "A component that renders other components",
+                    "is_correct": false
+                },
+                {
+                    "id": 16,
+                    "options_text": "A component with more state than others",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "content_type": "quiz",
+            "title": "What is the purpose of useEffect in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 17,
+                    "options_text": "To perform side effects in function components",
+                    "is_correct": true
+                },
+                {
+                    "id": 18,
+                    "options_text": "To define the initial state of a component",
+                    "is_correct": false
+                },
+                {
+                    "id": 19,
+                    "options_text": "To handle form submissions",
+                    "is_correct": false
+                },
+                {
+                    "id": 20,
+                    "options_text": "To style components dynamically",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "content_type": "quiz",
+            "title": "What are props in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 21,
+                    "options_text": "Properties that are passed to components",
+                    "is_correct": true
+                },
+                {
+                    "id": 22,
+                    "options_text": "Special methods in React components",
+                    "is_correct": false
+                },
+                {
+                    "id": 23,
+                    "options_text": "Internal state of components",
+                    "is_correct": false
+                },
+                {
+                    "id": 24,
+                    "options_text": "Global variables in React components",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "content_type": "quiz",
+            "title": "What is the purpose of the key prop in React JS lists?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 25,
+                    "options_text": "To uniquely identify list items and improve performance",
+                    "is_correct": true
+                },
+                {
+                    "id": 26,
+                    "options_text": "To style list items with unique keys",
+                    "is_correct": false
+                },
+                {
+                    "id": 27,
+                    "options_text": "To define the order of list items",
+                    "is_correct": false
+                },
+                {
+                    "id": 28,
+                    "options_text": "To hide certain list items from view",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "content_type": "quiz",
+            "title": "What is the purpose of useRef in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 29,
+                    "options_text": "To access DOM nodes or React elements directly",
+                    "is_correct": true
+                },
+                {
+                    "id": 30,
+                    "options_text": "To define component references",
+                    "is_correct": false
+                },
+                {
+                    "id": 31,
+                    "options_text": "To manage component state",
+                    "is_correct": false
+                },
+                {
+                    "id": 32,
+                    "options_text": "To handle component events",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "content_type": "quiz",
+            "title": "What is the purpose of useMemo in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 33,
+                    "options_text": "To memoize expensive computations and optimize performance",
+                    "is_correct": true
+                },
+                {
+                    "id": 34,
+                    "options_text": "To manage component side effects",
+                    "is_correct": false
+                },
+                {
+                    "id": 35,
+                    "options_text": "To define component props",
+                    "is_correct": false
+                },
+                {
+                    "id": 36,
+                    "options_text": "To handle component updates",
+                    "is_correct": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "content_type": "quiz",
+            "title": "What is the purpose of useContext in React JS?",
+            "data": "",
+            "module": 1,
+            "image_video": null,
+            "created_at": "2024-02-13T19:32:54.701931Z",
+            "updated_at": "2024-02-13T19:32:54.701963Z",
+            "content_options": [
+                {
+                    "id": 37,
+                    "options_text": "To access context values in functional components",
+                    "is_correct": true
+                },
+                {
+                    "id": 38,
+                    "options_text": "To manage component state",
+                    "is_correct": false
+                },
+                {
+                    "id": 39,
+                    "options_text": "To define component structure",
+                    "is_correct": false
+                },
+                {
+                    "id": 40,
+                    "options_text": "To handle component lifecycle methods",
+                    "is_correct": false
+                }
+            ]
+        }
+    ]
+}

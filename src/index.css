@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.158);
+    height: 0px;
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #949494;
+    /* border: 1px solid black; */
+    border-radius: 30px;
+}
+
+.home{
+    background-image: url('./assets/home.png');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media screen and (max-width: 850px) {
+    .home{
+        background-image: url('./assets/homeMobile.png');
+    }
+}
+
+.courses{
+    background-image: url('./assets/courses.png');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+.auth{
+    background-image: url('./assets/bg.png');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat:repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.input-field{
+    background: rgba(255, 255, 255, 0.2); /* Adjust the alpha channel for transparency */
+    backdrop-filter: blur(10px);
+}
+
+.active{
+    background-color: #4F46E5;
+    color: white;
+}
+
+
+.imgbg{
+    background-image: url('./assets/bgimg.png') !important;
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat:repeat; /* Do not repeat the image */
+    background-size: cover;
+}
