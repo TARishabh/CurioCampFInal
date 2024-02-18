@@ -9,6 +9,10 @@ import {
   onMicrophoneChanged
 } from "agora-rtc-sdk-ng/esm"
 import { Link } from 'react-router-dom'
+import Reactlogo from "../assets/reactlogo.svg";
+import Angularlogo from "../assets/angularlogo.svg";
+import Nodejslogo from "../assets/nodejslogo.svg";
+import Nextjslogo from "../assets/nextjslogo.svg";
 // console.log("Current SDK VERSION: ", VERSION)
 onCameraChanged(device => {
   // console.log("onCameraChanged: ", device)
@@ -23,8 +27,14 @@ const client = createClient({
 let audioTrack
 let videoTrack
 const LiveStreamRoom = () => {
+  const [selectedLogo, setSelectedLogo] = useState(null);
+
+  const handleClick = (logo) => {
+    setSelectedLogo(logo);
+  };
   const agora_appId = import.meta.env.VITE_Agora_appid
   const agora_token = import.meta.env.VITE_AGORA_TOKEN
+  const agora_room = 'main'
   const [isAudioOn, setIsAudioOn] = useState(false)
   const [isVideoOn, setIsVideoOn] = useState(false)
   const [isAudioPubed, setIsAudioPubed] = useState(false)
@@ -33,9 +43,6 @@ const LiveStreamRoom = () => {
   const [isLiveStreamRoom, setIsLiveStreamRoom] = useState(true);
   const is_actual_superuser = localStorage.getItem("is_actual_superuser");
   console.log(is_actual_superuser);
-
-
-
   const turnOnCamera = async flag => {
     flag = flag ?? !isVideoOn
     setIsVideoOn(flag)
@@ -76,7 +83,7 @@ const LiveStreamRoom = () => {
     // )
     await client.join(
       agora_appId,
-      channel.current,
+      agora_room,
       agora_token,
       null
     )
@@ -115,6 +122,7 @@ const LiveStreamRoom = () => {
     await client.publish(audioTrack)
     setIsAudioPubed(true)
   }
+  
   return (
     <>
       <div className="left-side mt-2">
@@ -134,30 +142,43 @@ const LiveStreamRoom = () => {
             Turn {isAudioOn ? "off" : "on"} Microphone
           </button>}
         </div>
-        {/* <h3>
-          {`Please input the appid and token (`}
-          <a href="https://www.agora.io/en/blog/how-to-get-started-with-agora">
-            Create an account.
-          </a>
-          {`) `}
-        </h3> */}
-        {/* <input
-          defaultValue={agora_appId}
-          placeholder="appid"
-          onChange={e => (appid.current = e.target.value)}
+        
+        <h2 className='text-indigo-600 block text-lg font-bold'>Default rooms:</h2>
+        <div className="flex gap-7">
+        <img
+          className={`w-24 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-gray-500/20 rounded-xl focus:scale-[1.02] focus:opacity-[0.85] focus:shadow-none active:scale-100 active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${selectedLogo === 'react' && 'brightness-125 border-2 border-indigo-600'}`}
+          src={Reactlogo}
+          alt="reactlogo"
+          onClick={() => handleClick('react')}
         />
-        <input
-          defaultValue={token.current}
-          placeholder="token"
-          onChange={e => (token.current = e.target.value)}
-        /> */}
+        <img
+          className={`w-24 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-gray-500/20 rounded-xl focus:scale-[1.02] focus:opacity-[0.85] focus:shadow-none active:scale-100 active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${selectedLogo === 'angular' && 'brightness-125 border-2 border-indigo-600'}`}
+          src={Angularlogo}
+          alt="angularlogo"
+          onClick={() => handleClick('angular')}
+        />
+        <img
+          className={`w-24 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-gray-500/20 rounded-xl focus:scale-[1.02] focus:opacity-[0.85] focus:shadow-none active:scale-100 active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${selectedLogo === 'nextjs' && 'brightness-125 border-2 border-indigo-600'}`}
+          src={Nextjslogo}
+          alt="nextjslogo"
+          onClick={() => handleClick('nextjs')}
+        />
+        <img
+          className={`w-24 transition-all hover:scale-[1.02] hover:shadow-lg hover:shadow-blue-gray-500/20 rounded-xl focus:scale-[1.02] focus:opacity-[0.85] focus:shadow-none active:scale-100 active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ${selectedLogo === 'nodejs' && 'brightness-125 border-2 border-indigo-600'}`}
+          src={Nodejslogo}
+          alt="nodejslogo"
+          onClick={() => handleClick('nodejs')}
+        />
+      </div>
+        <div className='hidden'>
         <h3 className='mb-3 ml-2'>Please input the channel name</h3>
-        <input
+        {/* <input
           defaultValue={channel.current}
           onChange={e => (channel.current = e.target.value)}
           className='flex border-2 items-center w-full justify-center  px-3 py-3 rounded-2xl m-2 border-indigo-600'
-        />
-        <div className="buttons">
+        /> */}
+        </div>
+        <div className="buttons mt-4">
           <button onClick={joinChannel} className={`py-2 mt-1 px-4 mx-2 inline-block rounded-full shadow-2xl bg-[#4F46E5] text-[#FFFFFF] hover:bg-[#382bf0] hover:-translate-y-1 duration-300`}>
             Join Channel
           </button>
@@ -176,12 +197,12 @@ const LiveStreamRoom = () => {
             Publish Audio
           </button>}
           <button onClick={leaveChannel} className={`py-2 mt-1 px-4 mx-2 inline-block rounded-full shadow-2xl bg-[#4F46E5] text-[#FFFFFF] hover:bg-[#382bf0] hover:-translate-y-1 duration-300`}>Leave Channel</button>
-          <Link
+{(is_actual_superuser === "true") &&<Link
     to="/quizform"
     rel="noopener"
     className="px-4 py-2 text-lg mt-5 font-medium text-white bg-indigo-600 rounded-full">
     Quiz Form
-  </Link>
+  </Link>}
         </div>
       </div>
       <div className="right-side">

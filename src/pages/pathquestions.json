@@ -4,7 +4,7 @@
         {
             "id": 9,
             "content_type": "quiz",
-            "title": "What is your Tech Knowledge? ",
+            "title": "How would you rate your current Tech Knowledge?",
             "data": "",
             "module": 1,
             "image_video": null,
