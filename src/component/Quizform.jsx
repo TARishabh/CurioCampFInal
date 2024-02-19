@@ -4,14 +4,14 @@ import { getDatabase, ref, push, update } from 'firebase/database';
 import { Link } from 'react-router-dom';
 // Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBm3--ubPJARyUzEGmwUVqqmiGeLBQbATU",
-    authDomain: "curiocamp-b13dc.firebaseapp.com",
-    databaseURL: "https://curiocamp-b13dc-default-rtdb.firebaseio.com",
-    projectId: "curiocamp-b13dc",
-    storageBucket: "curiocamp-b13dc.appspot.com",
-    messagingSenderId: "346127704571",
-    appId: "1:346127704571:web:4c77347a938eb9481e2b5e",
-    measurementId: "G-1PYWZ9RYPH"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  databaseURL: import.meta.env.VITE_databaseURL,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+  measurementId: import.meta.env.VITE_measurementId,
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
